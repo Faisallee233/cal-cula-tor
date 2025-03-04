@@ -22,10 +22,16 @@ const [display, setdisplay] = useState('')
       setdisplay(eval(display))
     }catch(error){
       setdisplay("Undefined")
-    }
-    
+    } 
       
   }
+
+ const characters = ["/","9","8","7","+","6","5","4","-","3","2","1","*","0","."]
+ 
+ const isOperator = (chara) => {
+  return ["+", "-", "*", "/","."].includes(chara);
+};
+
    
 
   return (
@@ -35,21 +41,13 @@ const [display, setdisplay] = useState('')
       </input>
       </div>
       <div  className='containerbtn'>
-      <button onClick={()=>appendto("/")}  className='btn'>/</button>
-       <button onClick={()=>appendto("9")} >9</button>
-       <button onClick={()=>appendto("8")} >8</button>
-       <button onClick={()=>appendto("7")} >7</button>
-       <button onClick={()=>appendto("+")} className='btn'>+</button>
-       <button onClick={()=>appendto("6")} >6</button>
-       <button onClick={()=>appendto("5")} >5</button>
-       <button onClick={()=>appendto("4")} >4</button>
-       <button onClick={()=>appendto("-")} className='btn'>-</button>
-       <button onClick={()=>appendto("3")} >3</button>
-       <button onClick={()=>appendto("2")} >2</button>
-       <button onClick={()=>appendto("1")} >1</button>
-       <button onClick={()=>appendto("*")} className='btn'>*</button>
-       <button onClick={()=>appendto("0")} >0</button>
-       <button onClick={()=>appendto(".")} className='btn'>.</button>
+
+        {
+          characters.map((char, index)=>{
+            return (<button onClick={()=>appendto(char)} key={index}  className={`${isOperator(char) ? 'operator' : 'number'}`}>{char}</button>)
+          })
+        }
+      
        <button onClick={()=>appendtoResult("=")} className='btn'>=</button>
        <button onClick={()=>appendtoClear()} className='btn'>C</button>
        <button  onClick={()=>appendtoDel()} className='btn'><BackspaceIcon fontSize='0.7rem'/></button>
