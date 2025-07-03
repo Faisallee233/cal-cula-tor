@@ -56,6 +56,12 @@ input{
   box-shadow: 5px 5px 5px 5px hwb(0 0% 80%);
 }
 
+@media screen and (max-width: 768px){
+  .calculator{
+    width: 90%;
+  }
+}
+
 .btn{
   background-color: hsl(240, 100%, 35%);
   color: hsl(0, 0%, 90%) ;
