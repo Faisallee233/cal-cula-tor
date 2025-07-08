@@ -1,0 +1,105 @@
+body{
+  background-color: hsl(0, 0%, 80%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  margin: 0;
+
+  display: grid;
+  place-items: center;
+
+}
+
+button{
+  width: 120px;
+  height: 120px;
+  background-color: hsl(0, 0%, 80%);
+  border-radius: 100%;
+  border: 0;
+  font-size: 4rem;
+  color: hsl(0, 100%, 50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: hsl(0, 0%, 80%);
+}
+
+button:active{
+  background-color: hsl(0, 0%, 80%);
+}
+
+input{
+  padding: 5%;
+  text-align: right;
+  border: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 89%);
+  width: 90%;
+  font-size: 6rem;
+  color:hsl(0, 100%, 50%) ;
+
+}
+
+.calculator{
+  background-color: hsl(0, 0%, 85%);
+  width: 550px;
+  overflow: hidden;
+
+  box-shadow: 5px 5px 5px 5px hwb(0 0% 80%);
+}
+
+@media screen and (max-width: 768px){
+  .calculator{
+    width: 90%;
+  }
+}
+
+.btn{
+  background-color: hsl(240, 100%, 35%);
+  color: hsl(0, 0%, 90%) ;
+}
+
+.btn:hover{
+  background-color: hsl(0, 75%, 17%) ;
+  color: hsl(0, 0%, 95%) ;
+}
+
+.btn:active{
+  background-color: hsl(240, 100%, 50%);
+  color: hsl(0, 0%, 100%) ;
+}
+
+.containerbtn{
+  padding: 0.8%;
+  overflow: hidden;
+
+  height: 700px;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1%;
+
+  text-align: center;
+}
+
+.operator{
+  background-color: hsl(240, 100%, 35%);
+  color: hsl(0, 0%, 90%) ;
+}
+.operator:hover{
+  background-color: hsl(0, 75%, 17%) ;
+  color: hsl(0, 0%, 95%) ;
+}
+
+.operator:active{
+  background-color: hsl(240, 100%, 50%);
+  color: hsl(0, 0%, 100%) ;
+}
